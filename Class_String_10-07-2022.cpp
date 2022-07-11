@@ -104,8 +104,8 @@ int main()
 	str3.Print();
 	str2 = str3;
 	str2.Print();
-	MyString res;
-	//res = str2 + str3;;
+	MyString res("25");
+	res = str2 + str3;;
 	
 	res.Print();
 	return 0;
