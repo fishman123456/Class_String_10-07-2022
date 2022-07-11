@@ -34,7 +34,55 @@ public:
 	{
 		delete[] this->str;
 	}
+	MyString & operator =(const MyString &other)
+	{
+		if (this->str = nullptr)
+		{
+			delete[] str;
+		}
+		int lenght = strlen(other.str);
+		this->str = new char[lenght + 1];
+		for (int i = 0; i < lenght; i++)
 
+		{
+			this->str[i] = other.str[i];
+		}
+		this->str[lenght] = '\0';
+		return *this;
+	}
+	void  myString(const MyString& other)
+	{
+		if (this->str = nullptr)
+		{
+			delete[] str;
+		}
+		int lenght = strlen(other.str);
+		this->str = new char[lenght + 1];
+		for (int i = 0; i < lenght; i++)
+
+		{
+			this->str[i] = other.str[i];
+		}
+		this->str[lenght] = '\0';
+	}
+	MyString & operator +(const MyString &other)
+	{
+		MyString newStr;
+		int thislight = strlen(this->str);
+		int otherlenght = strlen(other.str);
+		newStr.str = new char[thislight + otherlenght + 1];
+		int i{ 0 };
+		for (int i = 0; i < thislight; i++)
+		{
+			newStr.str[i] = this->str[i];
+		}
+		for (int j = 0; j < otherlenght; j++, i++)
+		{
+			newStr.str[i] = other.str[j];
+		}
+		newStr.str[thislight + otherlenght + '\0'];
+		return newStr;
+	}
 	void Print()
 	{
 		cout << endl;
@@ -50,6 +98,17 @@ int main()
 {
 	MyString str("yutyu");
 	str.Print();
+	MyString str2("222");
+	str2.Print();
+	MyString str3("jgh");
+	str3.Print();
+	str2 = str3;
+	str2.Print();
+	MyString res;
+	//res = str2 + str3;;
+	
+	res.Print();
 	return 0;
+
 }
 // конец
