@@ -96,6 +96,8 @@ private:
 
 int main()
 {
+	system("chcp 1251");
+
 	MyString str("yutyu");
 	str.Print();
 	MyString str2("222");
@@ -104,8 +106,8 @@ int main()
 	str3.Print();
 	str2 = str3;
 	str2.Print();
-	MyString res("25");
-	res = str2 + str3;;
+	MyString res("UOI");
+	//res = str2 + str3;;
 	
 	res.Print();
 	return 0;

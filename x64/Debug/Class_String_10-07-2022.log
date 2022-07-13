@@ -1,8 +1,7 @@
 ﻿  Class_String_10-07-2022.cpp
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(25,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(43,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(59,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(71,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(72,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(84): warning C4172: возвращение адреса локальной или временной переменной : newStr
-  Class_String_10-07-2022.vcxproj -> C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\x64\Debug\Class_String_10-07-2022.exe
+C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\Class_String_10-07-2022.cpp(25,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\Class_String_10-07-2022.cpp(43,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\Class_String_10-07-2022.cpp(59,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\Class_String_10-07-2022.cpp(71,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\Class_String_10-07-2022.cpp(72,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Class_String_10-07-2022.vcxproj -> C:\Users\profi\Documents\fishman_progect\Class_String_10-07-2022\x64\Debug\Class_String_10-07-2022.exe
