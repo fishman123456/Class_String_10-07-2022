@@ -1,8 +1,8 @@
 ﻿  Class_String_10-07-2022.cpp
 C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(25,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(43,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(59,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(71,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(72,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(84): warning C4172: возвращение адреса локальной или временной переменной : newStr
+C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(44,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(60,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(74,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(75,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\Class_String_10-07-2022.cpp(87): warning C4172: возвращение адреса локальной или временной переменной : newStr
   Class_String_10-07-2022.vcxproj -> C:\Users\den91\Documents\GitHub\Class_String_10-07-2022\x64\Debug\Class_String_10-07-2022.exe

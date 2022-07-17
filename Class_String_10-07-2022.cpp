@@ -20,7 +20,7 @@ public:
 	{
 		str = nullptr;
 	}
-	 MyString(const char *str)
+	MyString(const char* str)
 	{
 		int lenght = strlen(str);
 		this->str = new char[lenght + 1];
@@ -33,8 +33,9 @@ public:
 	~MyString()
 	{
 		delete[] this->str;
+		cout << "delete :" << &str << endl;
 	}
-	MyString & operator =(const MyString &other)
+	MyString& operator =(const MyString& other)
 	{
 		if (this->str = nullptr)
 		{
@@ -65,13 +66,15 @@ public:
 		}
 		this->str[lenght] = '\0';
 	}
-	MyString & operator +(const MyString &other)
+	MyString& operator +(const MyString& other)
 	{
+		int i = 0;
+		int j = 0;
 		MyString newStr;
 		int thislight = strlen(this->str);
 		int otherlenght = strlen(other.str);
 		newStr.str = new char[thislight + otherlenght + 1];
-		int i{ 0 };
+		
 		for (int i = 0; i < thislight; i++)
 		{
 			newStr.str[i] = this->str[i];
@@ -80,7 +83,7 @@ public:
 		{
 			newStr.str[i] = other.str[j];
 		}
-		newStr.str[thislight + otherlenght + '\0'];
+		newStr.str[thislight + otherlenght + 1];
 		return newStr;
 	}
 	void Print()
@@ -89,24 +92,33 @@ public:
 		cout << str;
 		cout << endl;
 	}
+	//void* operator new(size_t size)
+	//{
+	//	cout << "Overloading new operator with size: " << size << endl;
+	//	//void* p = ::operator new(size);
+	//	void * p = malloc(size);// will also work fine
+
+	//	return p;
+	//}
 private:
-	char *str;
+	char* str;
 
 };
 
 int main()
 {
-	MyString str("yutyu");
+	MyString str("one");
 	str.Print();
-	MyString str2("222");
+	MyString str2("two");
 	str2.Print();
-	MyString str3("jgh");
+	MyString str3("thre");
 	str3.Print();
 	str2 = str3;
 	str2.Print();
-	MyString res("25");
-	res = str2 + str3;;
-	
+	MyString res("res");
+	res.Print();
+	res = str2 + str3;
+
 	res.Print();
 	return 0;
 
