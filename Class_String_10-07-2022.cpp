@@ -23,7 +23,9 @@ public:
 	MyString(const char* str)
 	{
 		int lenght = strlen(str);
+
 		this->str = new char[lenght + 1];
+
 		for (int i = 0; i < lenght; i++)
 		{
 			this->str[i] = str[i];
@@ -66,16 +68,15 @@ public:
 		}
 		this->str[lenght] = '\0';
 	}
-	MyString& operator +(const MyString& other)
+	 MyString &operator +(const MyString& other)
 	{
-		int i = 0;
-		int j = 0;
+
 		MyString newStr;
 		int thislight = strlen(this->str);
 		int otherlenght = strlen(other.str);
 		newStr.str = new char[thislight + otherlenght + 1];
-		
-		for (int i = 0; i < thislight; i++)
+		int i = 0;
+		for (; i < thislight; i++)
 		{
 			newStr.str[i] = this->str[i];
 		}
@@ -83,7 +84,10 @@ public:
 		{
 			newStr.str[i] = other.str[j];
 		}
-		newStr.str[thislight + otherlenght + 1];
+		//newStr.str[thislight + otherlenght + '\0'];
+		newStr.str[thislight + otherlenght ]='\0';
+		cout << i << endl;
+		cout <<" concatenations " << newStr.str << endl;
 		return newStr;
 	}
 	void Print()
@@ -107,19 +111,19 @@ private:
 
 int main()
 {
-	MyString str("one");
+	MyString str("one ");
 	str.Print();
-	MyString str2("two");
+	MyString str2("two ");
 	str2.Print();
-	MyString str3("thre");
+	MyString str3("three ");
 	str3.Print();
 	str2 = str3;
 	str2.Print();
-	MyString res("res");
+	MyString res("res ");
 	res.Print();
-	res = str2 + str3;
-
+	res.myString  (str + str3);
 	res.Print();
+	
 	return 0;
 
 }
