@@ -17,80 +17,89 @@ class MyString
 {
 public:
 	MyString()
-	{
-		str = nullptr;
-	}
+		:m_str(nullptr)
+	{}
 	 MyString(const char *str)
+		 :m_str(new char[strlen(str) + 1])
 	{
 		int lenght = strlen(str);
-		this->str = new char[lenght + 1];
+		//this->m_str = new char[lenght + 1];
 		for (int i = 0; i < lenght; i++)
 		{
-			this->str[i] = str[i];
+			m_str[i] = str[i];
 		}
-		this->str[lenght] = '\0';
+		m_str[lenght] = '\0';
 	}
 	~MyString()
 	{
-		delete[] this->str;
+		delete[] m_str;
 	}
 	MyString & operator =(const MyString &other)
 	{
-		if (this->str = nullptr)
+		if (this->m_str = nullptr)
 		{
-			delete[] str;
+			delete[] m_str;
 		}
-		int lenght = strlen(other.str);
-		this->str = new char[lenght + 1];
+		int lenght = strlen(other.m_str);
+		this->m_str = new char[lenght + 1];
 		for (int i = 0; i < lenght; i++)
 
 		{
-			this->str[i] = other.str[i];
+			this->m_str[i] = other.m_str[i];
 		}
-		this->str[lenght] = '\0';
+		this->m_str[lenght] = '\0';
 		return *this;
 	}
-	void  myString(const MyString& other)
-	{
-		if (this->str = nullptr)
-		{
-			delete[] str;
-		}
-		int lenght = strlen(other.str);
-		this->str = new char[lenght + 1];
-		for (int i = 0; i < lenght; i++)
+	//void  myString(const MyString& other)
+	//{
+	//	if (this->str = nullptr)
+	//	{
+	//		delete[] str;
+	//	}
+	//	int lenght = strlen(other.str);
+	//	this->str = new char[lenght + 1];
+	//	for (int i = 0; i < lenght; i++)
 
-		{
-			this->str[i] = other.str[i];
-		}
-		this->str[lenght] = '\0';
-	}
+	//	{
+	//		this->str[i] = other.str[i];
+	//	}
+	//	this->str[lenght] = '\0';
+	//}
 	MyString & operator +(const MyString &other)
 	{
-		MyString newStr;
-		int thislight = strlen(this->str);
-		int otherlenght = strlen(other.str);
-		newStr.str = new char[thislight + otherlenght + 1];
+		//MyString newStr;
+		int thislight = strlen(this->m_str);
+		int otherlenght = strlen(other.m_str);
+		//newStr.str = new char[thislight + otherlenght + 1];
+		char* newStr = new char[thislight + otherlenght + 1];
 		int i{ 0 };
-		for (int i = 0; i < thislight; i++)
+		for (i; i < thislight; i++)
 		{
-			newStr.str[i] = this->str[i];
+			newStr[i] = this->m_str[i];
 		}
 		for (int j = 0; j < otherlenght; j++, i++)
 		{
-			newStr.str[i] = other.str[j];
+			newStr[i] = other.m_str[j];
 		}
-		newStr.str[thislight + otherlenght + '\0'];
-		return newStr;
+		//newStr.str[thislight + otherlenght + '\0'];
+		newStr[i] = '\0';
+
+		if (this == &other) {
+			delete[] this->m_str;
+			this->m_str = newStr;
+			return *this;
+		}
+
+		return *(new MyString(newStr));
 	}
 	void Print()
 	{
 		cout << endl;
-		cout << str;
+		cout << m_str;
 		cout << endl;
 	}
 private:
-	char *str;
+	char *m_str;
 
 };
 
@@ -99,15 +108,15 @@ int main()
 	system("chcp 1251");
 
 	MyString str("yutyu");
-	str.Print();
+	//str.Print();
 	MyString str2("222");
-	str2.Print();
+	//str2.Print();
 	MyString str3("jgh");
-	str3.Print();
+	//str3.Print();
 	str2 = str3;
-	str2.Print();
-	MyString res("UOI");
-	//res = str2 + str3;;
+	//str2.Print();
+	MyString res;
+	res = str2 + str3;
 	
 	res.Print();
 	return 0;
